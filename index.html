@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&family=M+PLUS+Rounded+1c:wght@400;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap">
+  <title>Rock, Paper, Scissors, Shoot!</title>
+</head>
+<body>
+  <div class="menu">
+    
+  </div>
+  <div class="interface-container">
+    <h1><span id="rock-heading">Rock</span> <span id="paper-heading">Paper</span> <span id="scissors-heading">Scissors</span>
+    </h1>
+    <p>Are you ready?</p>
+    <div class="buttons">
+      <button id="rock"><img src="https://static.thenounproject.com/png/477914-200.png" alt=""></button>
+      <button id="paper"><img src="https://static.thenounproject.com/png/477922-200.png" alt=""></button>
+      <button id="scissors"><img src="https://static.thenounproject.com/png/477919-200.png" alt=""></button>
+    </div>
+    <div class="stats">
+      <p>Wins: <span id="win"></span></p>
+      <p>Losses: <span id="loss"></span></p>
+      <p>Ties: <span id="tie"></span></p>
+    </div>
+    <button id="reset-button">RESET</button>
+  </div>
+
+  <div class="game-container">
+    <h1 id="result"></h1>
+    <div class="game-box">
+      <div id="player"></div>
+      <div><h1>VS</h1></div>
+      <div id="computer"></div>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

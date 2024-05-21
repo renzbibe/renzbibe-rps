@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: rgb(24, 24, 24);
+  --color2: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+  --container-width: 450px; 
+  --container-height: 420px;
+}
+
+body {
+  background-color: var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: Poppins;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.interface-container {
+  position: relative;
+  width: var(--container-width);
+  height: var(--container-height);
+  background-color: var(--color1); 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#rock-heading {
+  color: red;
+}
+
+#paper-heading {
+  color: cyan;
+}
+
+#scissors-heading {
+  color: magenta;
+}
+
+.buttons {
+  width: 300px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.buttons button {
+  border-radius: 10px;
+  height: 100px;
+}
+
+.buttons img {
+  height: 100px;
+}
+
+#rock {
+  background-color: red;
+  transition: 100ms;
+  
+}
+
+#rock:hover {
+  transform: translateY(4px);
+  transition: 100ms;
+}
+
+#paper {
+  background-color: cyan;
+  transition: 100ms;
+}
+
+#paper:hover {
+  transform: translateY(4px);
+  transition: 100ms;
+}
+
+#scissors {
+  background-color: magenta;
+  transition: 100ms;
+}
+
+#scissors:hover {
+  transform: translateY(4px);
+  transition: 100ms;
+}
+
+.stats {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-family: Poppins;
+  font-weight: normal;
+}
+
+.stats span {
+  color: yellow; 
+}
+
+#result {
+  position: absolute;
+  top: 50px;
+  font-family: Archivo;
+  font-size: 2.4rem;
+}
+
+#reset-button{
+  position: absolute;
+  bottom: 70px;
+  font-family: Lexend;
+  width: 100px;
+  height: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  color: var(--color1);
+  background-color: white;
+  transition: 100ms;
+}
+
+#reset-button:hover {
+  transform: translateY(4px);
+  transition: 100ms;
+}
+
+.game-container {
+  position: relative;
+  width: var(--container-width);
+  height: var(--container-height);
+  background-color: var(--color1); 
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.game-box {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.game-box img {
+  height: 130px;
+}
+
+.game-box div {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+#player h1 {
+  margin-bottom: 300px;
+}
+
+#computer {
+  transform: scaleX(-1);
+}
+
+#player::before, #computer::before {
+  position: absolute;
+  bottom: -30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Lexend;
+  /* color: yellow; */
+}
+
+#player::before {
+  content: "You";
+  
+}
+
+#computer::before {
+  content: "Computer";
+  transform: scaleX(-1);
+}
